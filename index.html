@@ -1,35 +1,501 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Misc-song.GitHub.io by misc-song</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Misc-song.GitHub.io</h1>
-      <h2 class="project-tagline">Welcome</h2>
-    </section>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>珍爱网，一个珍惜爱情的网站</title>
+         <link rel="stylesheet" type="text/css" href="css/BeginPage.css"/>        
+		 <script type="text/javascript" src="js/bgeinPage.js"></script>
+		
+		
+	</head>
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+	<body onload="changeProviceAndCity('select_provice','select_city',0),sizeBigImg(),changeProviceAndCity('placeProvice','placeCity',0),changeProviceAndCity('showImg_select_provice','showImg_select_city',0)">
+		<!--网页头开始-->
+		<div id="new_header">
+			<div class="new_wrap">
+				<span><img src="img/bascImg/LogImage.png" /></span>
+				<span><img src="img/bascImg/LogleftImg.png" /></span>
+				<div id="new_header_login" style="float: right;margin-top: 20px;">
+					<form action="#" method="post">
+						<input class="input_name" type="text" name="uesr_name" placeholder="邮箱/ID/手机号" />
+						<input class="input_psw" type="password" name="uesr_psw" placeholder="密码" />
+						<input class="input_go" type="submit" value="登录" />
+						<p style="float: left;margin:0px 10px;font-size: 14px;color: #aaa;">
+							<span style="display: inline-block;padding-top:2px ;">其他登录</span>
+							<a class="openid_qq" href="#" target="_blank" style="background-position:0 0;"></a>
+							<a class="openid_weibo" href="#" target="_blank" style="background-position:-16px 0;"></a>
+							<a class="openid_baidu" href="#" target="_blank" style="background-position:-32px 0;"></a>
+							<a class="openid_zhifubao" href="#" target="_blank" style="background-position:-48px 0;"></a>
+						</p>
+						<span style="font-size: 14px;"><a id="header_forgetpsd" href="#">忘记密码</a></span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--网页头结束-->
 
+		<!--网页注册部分开始-->
+		<div id="new_user_reg">
+			<div class="new_wrap">
+				<div id="new_from_reg" style="cursor:default;background-color: #FFFEFD;">
+					<form action="#" method="post">
+						<h2 id="new_from_reg_title">花费一分钟，享一辈子幸福</h2>
 
+						<dl>
+							<dt>性别</dt>
+							<dd>
+								<input type="radio" name="sex" id="sexM" value="m" />
+								<label for="sexM" class="nan sex" style="margin-right: 30px;">男</label>
+								<input type="radio" name="sex" id="sexF" value="f" />
+								<label for="sexF" class="nv sex">女</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt>生日</dt>
+							<dd>
+								<input type="text" name="brithyear" id="byear" /> <span style="position: absolute;left: 160px;color: #666666;">年</span>
+								<input type="text" name="brithmoon" id="bmoon" /><span style="position: absolute;left: 250px;color: #666666;">月</span>
+								<input type="text" name="brithday" id="bday" /><span style="position: absolute;left:340px;color: #666666;">日</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>所在地区</dt>
+							<dd>
+								<select name="provice" id="select_provice" onchange="changeProviceAndCity('select_provice','select_city',1)">					   
+									
+								</select>
+								<select name="city" id="select_city">
+									
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>婚姻状况</dt>
+							<dd>
+								<input type="radio" name="marriage" id="unmarried" value="unmarried" />
+								<label for="unmarried" style="margin-right: 30px;">未婚</label>
+								<input type="radio" name="marriage" id="divorce" value="divorce" />
+								<label for="divorce" style="margin-right: 30px;">离婚</label>
+								<input type="radio" name="marriage" id="bereft" value="bereft" />
+								<label for="bereft">丧偶</label>
+							</dd>
+						</dl>
+						<input type="submit" value="免费注册" id="new_from_reg_submit" />
+						<span style="text-align: center;display: block;"><a href="#" id="isnum_login">我是会员,立即登录</a></span>
+					</form>
+				</div>
 
+			</div>
+		</div>
+		<!--网页注册部分结束-->
 
+		<!--网页注册下面的宣传语开始-->
+		<div id="new_publist">
+			<div class="new_wrap">
+				<div id="new_publist_img"></div>
+			</div>
+		</div>
+		<!--网页注册下面的宣传语结束-->
 
-      <footer class="site-footer">
+		<!--单身贵族的照片展示开始-->
+		<div id="new_user_best">
+			<div class="new_wrap">
+				<h2>1.7亿优质会员，就在眼前</h2>
+				<div class="waterfall">
+					<div class="itme_list" style="position: relative;">
+						<div class="itme_list_label" id="itme_list_label">
+							<a href="javascript:;" class="a1" onclick="bestImgChg('itme_list_label',this,'wumei','1')">妩媚</a>
+							<a href="javascript:;" class="a2" onclick="bestImgChg('itme_list_label',this,'roumei','1')">柔美</a>
+							<a href="javascript:;" class="a3" onclick="bestImgChg('itme_list_label',this,'all','1')">全部</a>
+							<a href="javascript:;" class="a4" onclick="bestImgChg('itme_list_label',this,'qingchu','1')">清纯</a>
+							<a href="javascript:;" class="a5" onclick="bestImgChg('itme_list_label',this,'keai','1')">可爱</a>
+							<a href="javascript:;" class="a6" onclick="bestImgChg('itme_list_label',this,'youya','1')">优雅</a>
+							<a href="javascript:;" class="a7" onclick="bestImgChg('itme_list_label',this,'qizhi','1')">气质</a>
+							<a href="javascript:;" class="a8" onclick="bestImgChg('itme_list_label',this,'xinnan','1')">型男</a>
+							<a href="javascript:;" class="a9" onclick="bestImgChg('itme_list_label',this,'duanfa','1')">短发</a>
+						</div>
+						<div id="vip_data" class="vip_data">
+							<div class="vip_data_pos1">
+								<img src="img/best_img_wumei/1.jpg" id="vip_data_pos1_img" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos2">
+								<img src="img/best_img_wumei/2.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos3">
+								<img src="img/best_img_wumei/3.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos4">
+								<img src="img/best_img_wumei/4.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos5">
+								<img src="img/best_img_wumei/5.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos6">
+								<img src="img/best_img_wumei/6.jpg" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos7">
+								<img src="img/best_img_wumei/7.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos8">
+								<img src="img/best_img_wumei/8.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos9">
+								<img src="img/best_img_wumei/9.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos10">
+								<img src="img/best_img_wumei/10.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos11">
+								<img src="img/best_img_wumei/11.jpg" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos12">
+								<img src="img/best_img_wumei/12.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos13">
+								<img src="img/best_img_wumei/13.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos14">
+								<img src="img/best_img_wumei/14.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos15">
+								<img src="img/best_img_wumei/15.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos16">
+								<img src="img/best_img_wumei/16.jpg" class="vip_data_pos1_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos17">
+								<img src="img/best_img_wumei/17.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+							<div class="vip_data_pos18">
+								<img src="img/best_img_wumei/18.jpg" class="vip_data_pos2_imgc  vip_data_img" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="best_search">
+					<ul>
+						<form id="index_search_form" name="index_search_form" method="get" target="_blank" action="http://search.jiayuan.com/">
+							<input type="hidden" name="avatar" value="1" />
+							<li class="s_1">
+								<div class="search_ico"></div>
+								<b>更多优质会员，请搜索</b>
+							</li>
+							<li class="s_2">
+								<b>我要找</b>
+								<div class="drop_down">
+									<select name="drop_down_sex">
+										<option value="">男朋友</option>
+										<option value="">女朋友</option>
+									</select>
+								</div>
+							</li>
+							<li class="s_2">
+								<b>年龄</b>
+								<div class="drop_down drop_down_age">
+									<input type="text" name="minAge" id="minAge" value="" style="width: 50px;height:28px;padding-left:20px ;" />
+									<span id="minAgeLeft">岁</span>
+									<span>——</span>
+									<input type="text" name="maxAge" id="maxAge" value="" style="width: 50px;height:28px;padding-left:20px ;" />
+									<span id="maxAgeRight">岁</span>
+								</div>
+							</li>
+							<li class="s_2">
+								<b>地区</b>
+								<div class="drop_down drop_down_location">
+									<select name="place" id="placeProvice" onchange="changeProviceAndCity('placeProvice','placeCity',1)">
+										
+									</select>
+									<select name="place" id="placeCity">
+										
+									</select>
+								</div>
+							</li>
+							<li class="s_3"><input type="submit" class="search_go" value="搜索" style="width: 102px; height:29px; padding-left: 10px;margin-left: 10px;" /></li>
+						</form>
+					</ul>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+				</div>
 
-    </section>
+			</div>
 
-  
-  </body>
+		</div>
+		<!--单身贵族的照片展示结束-->
+
+		<!--成功结婚的照片展示开始-->
+		<div id="new_user_succeed">
+			<div class="new_wrap">
+				<h2 class="sprite">就在你身边，他们相爱啦！</h2>
+				<div style="display: block;position: absolute;top: 10px;right: 0;" class="love_count">
+					<ul>
+						<li>已经有</li>
+						<li class="num" style="padding: 0 0 0 10px;"><i>1</i><i>3</i><i>8</i><i>4</i><i>3</i><i>7</i><i>5</i><i>2</i></li>
+						<li>人找到幸福了</li>
+					</ul>
+				</div>
+				<div class="love_case">
+					<div class="item label" id="item_label_a">
+						<a href="javascript:;" class="a1" style="top: 0px;left: 0px;" onclick="bestImgChg('item_label_a',this,'sanzhe','2')">一波三折</a>
+						<a href="javascript:;" class="a2" style="top: 0px;left: 81px;" onclick="bestImgChg('item_label_a',this,'zaihun','2')">再婚</a>
+						<a href="javascript:;" class="a3 " style="top: 41px;left:0px;" onclick="bestImgChg('item_label_a',this,'langcai','2')">郎才女貌</a>
+						<a href="javascript:;" class="a4" style="top: 41px;left: 81px;" onclick="bestImgChg('item_label_a',this,'xinnan','2')">型男</a>
+						<a href="javascript:;" class="a5" style="top: 82px;left: 0px;" onclick="bestImgChg('item_label_a',this,'zhongqin','2')">一见钟情</a>
+						<a href="javascript:;" class="a6" style="top: 82px;left: 81px;" onclick="bestImgChg('item_label_a',this,'danqing','2')">单亲妈妈</a>
+						<a href="javascript:;" class="a7" style="top: 123px;left: 0px;" onclick="bestImgChg('item_label_a',this,'80hou','2')">80后</a>
+						<a href="javascript:;" class="a8" style="top: 123px;left: 81px;" onclick="bestImgChg('item_label_a',this,'jianchi','2')">坚持</a>
+					</div>
+					<div class="love_data" id="love_data">
+						<div style="opacity: 1; top: 0;left: 168px;" class="item tm pos1" >
+							<a data_sid="417495" data_user_name="开心 &amp; 保密" data_love_data="2015.07.30" href="javascript:"><img src="img/successImg_langcai/1.jpg"  class="succeed_img" >
+								<div class="user_name"><i><em>开心 &amp; 保密</em><em>2015.07.30</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0;left: 336px;" class="item tm pos2" >
+							<a data_sid="158963" data_user_name="茹 &amp; 旁白.." data_love_data="2011.02.20" href="javascript:"><img src="img/successImg_langcai/2.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>茹 &amp; 旁白..</em><em>2011.02.20</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0px;left: 504px;" class="item tm pos3">
+							<a data_sid="317198" data_user_name="无心写意 &amp; 保密" data_love_data="2012.12.08" href="javascript:"><img src="img/successImg_langcai/3.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>无心写意 &amp; 保密</em><em>2012.12.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0px;left: 672px;" class="item tm pos4">
+							<a data_sid="299948" data_user_name="妞儿宝贝 &amp; seven" data_love_data="2012.09.04" href="javascript:"><img src="img/successImg_langcai/4.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>妞儿宝贝 &amp; seven</em><em>2012.09.04</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top: 0px;left: 840px;" class="item tm pos5">
+							<a data_sid="66683" data_user_name="旧时光 &amp; 舆世蕪爭" data_love_data="2010.04.23" href="javascript:"><img src="img/successImg_langcai/5.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>旧时光 &amp; 舆世蕪爭</em><em>2010.04.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 0px;" class="item tm pos6" >
+							<a data_sid="248815" data_user_name="曦 &amp; 保密" data_love_data="2012.01.28" href="javascript:"><img src="img/successImg_langcai/6.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>曦 &amp; 保密</em><em>2012.01.28</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 168px;" class="item tm pos7">
+							<a data_sid="432095" data_user_name="季末非陌 &amp; 保密" data_love_data="2016.05.23" href="javascript:"><img src="img/successImg_langcai/7.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>季末非陌 &amp; 保密</em><em>2016.05.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 336px;" class="item tm pos8" >
+							<a data_sid="432583" data_user_name="他是她的 &amp; 保密" data_love_data="2016.06.08" href="javascript:"><img src="img/successImg_langcai/8.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>他是她的 &amp; 保密</em><em>2016.06.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 504px;" class="item tm pos9" >
+							<a data_sid="223039" data_user_name="北方有佳人 &amp; 保密" data_love_data="2011.09.17" href="javascript:"><img src="img/successImg_langcai/9.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>北方有佳人 &amp; 保密</em><em>2011.09.17</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left: 672px;" class="item tm pos10">
+							<a data_sid="248549" data_user_name="贾男 &amp; 保密" data_love_data="2012.01.26" href="javascript:"><img src="img/successImg_langcai/10.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>贾男 &amp; 保密</em><em>2012.01.26</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;top:168px;left:840px;" class="item tm pos11" >
+							<a data_sid="352034" data_user_name="永恒 &amp; 灰太狼小妞" data_love_data="2013.07.28" href="javascript:"><img src="img/successImg_langcai/11.jpg"  class="succeed_img">
+								<div class="user_name"><i><em>永恒 &amp; 灰太狼小妞</em><em>2013.07.28</em></i><span></span></div>
+							</a>
+						</div>
+						<!--<div style="opacity: 1;" class="item tm pos1" >
+							<a data_sid="417495" data_user_name="开心 &amp; 保密" data_love_data="2015.07.30" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/story_1438742795_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>开心 &amp; 保密</em><em>2015.07.30</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos2" >
+							<a data_sid="158963" data_user_name="茹 &amp; 旁白.." data_love_data="2011.02.20" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/73f6062164_160x160.jpg">
+								<div class="user_name"><i><em>茹 &amp; 旁白..</em><em>2011.02.20</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos3">
+							<a data_sid="317198" data_user_name="无心写意 &amp; 保密" data_love_data="2012.12.08" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/6ad9635096_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>无心写意 &amp; 保密</em><em>2012.12.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos4">
+							<a data_sid="299948" data_user_name="妞儿宝贝 &amp; seven" data_love_data="2012.09.04" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/a634098308_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>妞儿宝贝 &amp; seven</em><em>2012.09.04</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos5">
+							<a data_sid="66683" data_user_name="旧时光 &amp; 舆世蕪爭" data_love_data="2010.04.23" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/c87d846247_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>旧时光 &amp; 舆世蕪爭</em><em>2010.04.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos6">
+							<a data_sid="248815" data_user_name="曦 &amp; 保密" data_love_data="2012.01.28" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/7daf3c9357_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>曦 &amp; 保密</em><em>2012.01.28</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos7">
+							<a data_sid="432095" data_user_name="季末非陌 &amp; 保密" data_love_data="2016.05.23" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/story_1464140810_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>季末非陌 &amp; 保密</em><em>2016.05.23</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos8">
+							<a data_sid="432583" data_user_name="他是她的 &amp; 保密" data_love_data="2016.06.08" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/story_1465698128_160x160.jpg">
+								<div class="user_name"><i><em>他是她的 &amp; 保密</em><em>2016.06.08</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos9">
+							<a data_sid="223039" data_user_name="北方有佳人 &amp; 保密" data_love_data="2011.09.17" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/017b5c4260_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>北方有佳人 &amp; 保密</em><em>2011.09.17</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos10">
+							<a data_sid="248549" data_user_name="贾男 &amp; 保密" data_love_data="2012.01.26" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/5853ac8722_160x160.jpg">
+								<div class="user_name"><i><em>贾男 &amp; 保密</em><em>2012.01.26</em></i><span></span></div>
+							</a>
+						</div>
+						<div style="opacity: 1;" class="item tm pos11">
+							<a data_sid="352034" data_user_name="永恒 &amp; 灰太狼小妞" data_love_data="2013.07.28" href="javascript:"><img src="http://images1.jyimg.com/w4/story/i/love/865de75745_160x160.jpg">
+								<div style="bottom: -48px;" class="user_name"><i><em>永恒 &amp; 灰太狼小妞</em><em>2013.07.28</em></i><span></span></div>
+							</a>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--成功结婚的照片展示结束-->
+		<!--增值业务展示开始-->
+		<div id="new_liehun">
+			<div class="new_wrap">
+				<div class="new_liehun_ico">
+
+				</div>
+				<h2 class="new_liehun_h2">红娘一对一服务 精准定位你的爱情</h2>
+				<a href="#" class="new_liehun_a">申请服务</a>
+			</div>
+		</div>
+		<!--增值业务展示结束-->
+		<!--网页信息说明和友情链接开始-->
+		<div id="common_foot">
+			<div style="padding-bottom: 0px;" class="hf_foot" id="common_footer">
+				<p id="bottom_nav_link">
+					<a href="http://www.jiayuan.com/helpcenter/postmail.php" target="_blank">联系客服</a><a href="http://www.jiayuan.com/bottom/index.html" target="_blank">关于我们</a>
+					<a href="http://ir.jiayuan.com/" target="_blank">Investor Relations</a>
+					<a href="http://www.jiayuan.com/bottom/connect.html" target="_blank">联系我们</a>
+					<a href="http://www.jiayuan.com/bottom/business.html" target="_blank">无线业务</a>
+					<a href="http://www.jiayuan.com/bottom/declare.html" target="_blank">注册条款</a>
+					<a href="http://www.jiayuan.com/bottom/links.php" target="_blank">友情链接</a>
+					<a href="http://www.jiayuan.com/bottom/jobs.html" target="_blank">招聘信息</a>
+					<a href="http://www.jiayuan.com/bottom/notice.html" target="_blank">交友信息</a>
+					<a href="http://www.jiayuan.com/bottom/private.html" target="_blank">隐私保护</a>
+					<a href="http://www.jiayuan.com/helpcenter/" target="_blank">帮助中心</a>
+					<a href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
+				</p>
+				<p id="bottom_site_copyright" style="">
+					<a class="bot_link_none" href="#">中文实名：珍爱网</a>
+					<a class="bot_link_none" href="#">ICP证书：沪B2-20100074</a>
+					<a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
+					<a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>
+					<a href="http://www.jiayuan.com/certificate/license.html" target="_blank">沪网文[2012]0720-106号</a>
+				</p>
+				<p>
+					©&nbsp;&nbsp;2003-2016&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;京公网安备110105002124号&nbsp;&nbsp;&nbsp;&nbsp;不良和违法信息举报专线：0316-5266032
+				</p>
+			</div>
+		</div>
+		<!--网页信息说明和友情链接结束-->
+		<!--网页最底部链接开始-->
+		<div id="common_power_foot">
+			<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120416163653405" target="_blank"><img src="img/bascImg/index.png" border="0"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;			
+			<span style="display:inline-block;position:relative;width:auto;">
+			<a href="https://ss.knet.cn/verifyseal.dll?sn=e13090211010042252l1a5000000&amp;ct=df&amp;a=1&amp;pa=0.7537572786514851" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="img/bascImg/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span>			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://about.58.com/fqz/index.html?utm_source=market&amp;spm=b-31580022738699-pe-f-829.hao360_101" target="_blank"><img src="img/bascImg/bjwj.jpg" border="0"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://www.shjbzx.cn/" target="_blank"><img src="img/bascImg/shjb.jpg" border="0"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://www.12377.cn/" target="_blank"><img src="img/bascImg/zghlw.jpg" border="0" height="40"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://bj429.com.cn/" target="_blank"><img src="img/bascImg/bj_safe_20160429.jpg" border="0"></a>
+		</div>
+		<!--网页最底部链接结束-->
+	    <!--点击图片弹窗部分开始-->
+		<div class="showImg_Bgc" id="showImg_Bgc">
+		</div>
+			<div id="showImg" >
+				
+         	   <div class="showImg_data" >
+         	     <div class="peoplehead_img" id="peoplehead_img" style="background-image: url(img/best_img_all/20160708104511.jpg)">
+         	     	
+         	     </div>
+         	     <div class="showImg_data_ico">
+         	     	  
+         	     </div>
+         	     <div class="people_data" >
+         	     	<div id="popup_user_name" style="font-size: 30px; color: red;margin-top: 10px;margin-bottom: 8px;">
+         	     		瑶瑶
+         	     	</div>
+         	     	<div id="popup_datail_info" style="font-size: 16px;padding: 10px 0px;color: #333333;border-bottom: 1px solid #EEEBEB;white-space: nowrap;">
+         	     		27岁,160CM,44KG
+         	     	</div>
+         	     	
+         	     	<div id="popup_tage" style="font-size: 16px;padding:10px 0px;color: #333333;border-bottom: 1px solid #EEEBEB;white-space: nowrap;">
+         	     		看书，喝咖啡
+         	     	</div>
+         	     	<div id="popup_evaluate"style="font-size: 14px;padding: 12px 0px;color: #333333;line-height: 24px;height: 92px;overflow: hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis; ">
+         	     		佳缘眼中的TA: 她是那种骨架小却丰满的女孩子空间发的红色款共计
+         	     	</div>
+         	     </div>
+         	     
+         	</div>
+         	<div class="showImg_regest ">   
+         		    <div class="colse_showImag" id="colse_showImag" onclick="closeShowImg()">
+					×
+				    </div>
+					<form action="#" method="post">
+						<span style="position: absolute; top: 10px;font-size:30px;color:#636363;">1.7亿会员</span><h2 id="new_from_reg_title" style="margin-top: 30px;">找你所想 选你所爱</h2>
+
+						<dl>
+							<dt>性别</dt>
+							<dd>
+								<input type="radio" name="sex" id="showImg_sexM" value="m" />
+								<label for="showImg_sexM" class="nan sex" style="margin-right: 30px;">男</label>
+								<input type="radio" name="sex" id="showImg_sexF" value="f" />
+								<label for="showImg_sexF" class="nv sex">女</label>
+							</dd>
+						</dl>
+						<dl>
+							<dt>生日</dt>
+							<dd>
+								<input type="text" name="brithyear" id="byear" /> <span style="position: absolute;left: 160px;color: #666666;">年</span>
+								<input type="text" name="brithmoon" id="bmoon" /><span style="position: absolute;left: 250px;color: #666666;">月</span>
+								<input type="text" name="brithday" id="bday" /><span style="position: absolute;left:340px;color: #666666;">日</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>所在地区</dt>
+							<dd>
+								<select name="showImg_provice" id="showImg_select_provice" onchange="changeProviceAndCity('showImg_select_provice','showImg_select_city',1)">					   
+									
+								</select>
+								<select name="showImg_city" id="showImg_select_city">
+									
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>婚姻状况</dt>
+							<dd>
+								<input type="radio" name="marriage" id="showImg_unmarried" value="unmarried" />
+								<label for="showImg_unmarried" style="margin-right: 30px;">未婚</label>
+								<input type="radio" name="marriage" id="showImg_divorce" value="divorce" />
+								<label for="showImg_divorce" style="margin-right: 30px;">离婚</label>
+								<input type="radio" name="marriage" id="showImg_bereft" value="bereft" />
+								<label for="showImg_bereft">丧偶</label>
+							</dd>
+						</dl>
+						<input type="submit" value="免费注册" id="showImg_submit" />
+						<span style="text-align: center;display: block;"><a href="#" id="isnum_login">我是会员,立即登录</a></span>
+					</form>				
+         	</div>
+         </div>
+		<!--点击图片弹窗部分结束-->
+         
+	</body>
+
 </html>
